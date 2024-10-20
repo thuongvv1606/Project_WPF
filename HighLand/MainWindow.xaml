@@ -8,28 +8,120 @@
         Title="MainWindow" Height="800" Width="1200">
     <Grid>
         <Grid Margin="0,0,800,0">
-            <Grid Margin="0,0,0,712" Background="#FF88E21C"/>
-            <Grid Margin="0,701,0,0" Background="#FF7EABE8"/>
-            <Grid Margin="0,621,0,83" Background="#FFD0E82B"/>
+            <Grid Margin="0,0,0,693" >
+                <Label Content="TW5" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Foreground="#FFED0A0A" FontWeight="Bold" FontSize="20"/>
+                <TextBlock x:Name="txtDate" HorizontalAlignment="Left" Margin="138,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" Height="27" Foreground="#FF051AEE" FontSize="18" FontWeight="Bold"/>
+                <TextBlock x:Name="txtName" HorizontalAlignment="Left" Margin="10,42,0,0" TextWrapping="Wrap" Text="Staff: CS1-HPC Land..." VerticalAlignment="Top" Height="26" Width="305" FontSize="20"/>
+                <Border BorderBrush="Black" BorderThickness="5" Margin="0,0,-17,0"/>
+            </Grid>
+            <Grid Margin="0,621,-21,67" Background="#FFD0E82B">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <!-- Total row -->
+                    <RowDefinition Height="Auto" />
+                    <!-- Tax row -->
+                    <RowDefinition Height="Auto" />
+                    <!-- Space between -->
+                    <RowDefinition Height="Auto" />
+                    <!-- Final total row -->
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="210*" />
+                    <ColumnDefinition Width="181*"/>
+                    <!-- First column takes remaining space -->
+                    <ColumnDefinition Width="Auto" />
+                    <!-- Second column fits content -->
+                </Grid.ColumnDefinitions>
+
+                <!-- Total row -->
+                <TextBlock Text="Total:" FontWeight="Bold" VerticalAlignment="Center" Margin="10,0,0,0" Grid.ColumnSpan="2" />
+                <TextBlock x:Name="txtTotalAmount" Text="{Binding TotalAmount, StringFormat=C}" FontWeight="Bold" VerticalAlignment="Center" Margin="10,0,20,0" Grid.Column="2" />
+
+                <!-- Tax row -->
+                <TextBlock Text="Tax (20%):" FontWeight="Bold" VerticalAlignment="Center" Margin="10,0,0,0" Grid.Row="1" Grid.ColumnSpan="2" />
+                <TextBlock x:Name="txtTaxAmount" Text="{Binding TaxAmount, StringFormat=C}" FontWeight="Bold" VerticalAlignment="Center" Margin="10,0,20,0" Grid.Column="2" Grid.Row="1" />
+
+                <!-- Empty space row -->
+                <TextBlock Text="" Grid.Row="1" Margin="0,11,0,7" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" >
+                    <TextBlock.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+
+                <!-- Final total row -->
+                <TextBlock Text="Total Amount (including Tax):" FontWeight="Bold" VerticalAlignment="Center" Margin="10,0,0,0" Grid.Row="3" Grid.ColumnSpan="2" />
+                <TextBlock x:Name="txtFinalAmount" Text="{Binding FinalAmount, StringFormat=C}" FontWeight="Bold" VerticalAlignment="Center" Margin="10,0,20,0" Grid.Column="2" Grid.Row="3" />
+            </Grid>
             <Grid Margin="0,77,0,163">
-                <StackPanel>
-                    <ListBox x:Name="CartListBox" 
-             ItemsSource="{Binding Cart}" 
-             Margin="10">
+                <StackPanel Width="380" Margin="10">
+                    <!-- ListBox for Cart Items -->
+                    <ListBox x:Name="CartListBox" Margin="0,0,0,10">
+                        <ListBox.Template>
+                            <ControlTemplate>
+                                <Grid>
+                                    <!-- Header Row -->
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <!-- Header -->
+                                    <StackPanel Orientation="Horizontal" Background="LightGray" Grid.Row="0">
+                                        <TextBlock Text="Tên" Width="120" />
+                                        <TextBlock Text="Giá" Width="60" />
+                                        <TextBlock Text="SL" Width="50" />
+                                        <!-- Shortened to "SL" -->
+                                        <TextBlock Text="Tổng" Width="60" />
+                                        <TextBlock Width="30" />
+                                        <!-- Empty for spacing -->
+                                    </StackPanel>
+
+                                    <!-- Item List -->
+                                    <ItemsPresenter Grid.Row="1" />
+                                </Grid>
+                            </ControlTemplate>
+                        </ListBox.Template>
                         <ListBox.ItemTemplate>
                             <DataTemplate>
-                                <StackPanel Orientation="Horizontal" Margin="5">
-                                    <Image Source="{Binding Image}" Width="50" Height="50" />
-                                    <TextBlock Text="{Binding ProductName}" Margin="5,0" />
-                                    <TextBlock Text="{Binding Price, StringFormat='Giá: {0:C}'}" Margin="5,0" />
-                                    <TextBlock Text="{Binding Quantity}" Margin="5,0" />
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding ProductName}" Width="120" />
+                                    <TextBlock Text="{Binding Price, StringFormat=C}" Width="60" />
+                                    <TextBlock Text="{Binding Quantity}" Width="50" />
+                                    <TextBlock Text="{Binding Total, StringFormat=C}" Width="60" />
+
+                                    <!-- Buttons for Increasing and Decreasing Quantity -->
+                                    <StackPanel Orientation="Horizontal" Width="30">
+                                        <Button Content="+" Click="IncreaseQuantity_Click" DataContext="{Binding}" Width="15" />
+                                        <Button Content="-" Click="DecreaseQuantity_Click" DataContext="{Binding}" Width="15" />
+                                    </StackPanel>
                                 </StackPanel>
                             </DataTemplate>
                         </ListBox.ItemTemplate>
                     </ListBox>
+
+
                 </StackPanel>
 
+
             </Grid>
+            <Grid Margin="0,695,-21,0" Background="Black">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Ordered Items row -->
+                <TextBlock Text="Ordered Items:" FontWeight="Bold" Foreground="White" VerticalAlignment="Center" Margin="10,0,34,0" FontSize="20" />
+                <TextBlock x:Name="txtOrderedItems" Text="0/0" FontWeight="Bold" Foreground="White" VerticalAlignment="Center" Margin="327,0,0,0" FontSize="20" />
+            </Grid>
+
+
         </Grid>
         <Grid Margin="400,0,0,0" Background="#FFE0D0F4">
             <Grid Margin="0,0,0,629">
@@ -48,48 +140,71 @@
                 <Button x:Name="btnNuocEp" Content="Nước Ép" HorizontalAlignment="Left" Margin="540,70,0,0" VerticalAlignment="Top" Height="55" Width="101" Background="#FFF06666"/>
                 <Button Content="Button" HorizontalAlignment="Left" Margin="646,70,0,0" VerticalAlignment="Top" Height="55" Width="130" Background="#FFF06666"/>
             </Grid>
-            <Grid Margin="0,700,0,0" Background="#FF9BE511"/>
+            <Grid Margin="0,684,0,0" Background="#FF9BE511">
+                <Button Content="Before"  Click="Button_Click_1" Margin="10,10,705,10"></Button>
+                <Button Content="Next"  Click="Button_Click" Margin="124,10,591,10"></Button>
+                <Button Content="ReOrder"  Click="btnReOrder" Margin="234,10,481,10"/>
+                <Button Content="Enter"  Click="btnEnter" Margin="705,10,10,10"/>
+                <Button Content="Exit" Click="btnExit"   Background="Red" Margin="358,10,358,10"/>
+                <Button Content="SendFirst" Margin="585,10,130,10"/>
+                <Button Content="Bill"   Margin="474,10,241,10"/>
+            </Grid>
             <Grid Margin="52,139,78,89">
                 <ListBox x:Name="ProductListBox" 
-             ItemsSource="{Binding Products}" 
-             HorizontalContentAlignment="Stretch" Margin="-50,0,-77,0" Background="#FFE0D0F4">
+         ItemsSource="{Binding Products}" 
+         HorizontalContentAlignment="Stretch" 
+         Margin="-50,0,-77,10" 
+         Background="#FFE0D0F4">
 
                     <!-- Using UniformGrid to arrange items -->
                     <ListBox.ItemsPanel>
                         <ItemsPanelTemplate>
                             <UniformGrid Rows="5" Columns="6" />
-                            <!-- Set to 4 columns -->
                         </ItemsPanelTemplate>
                     </ListBox.ItemsPanel>
 
                     <!-- Defining DataTemplate for each item -->
                     <ListBox.ItemTemplate>
                         <DataTemplate>
-                            <Border Margin="2" Background="LightGray" 
-                        BorderBrush="DarkGray" 
-                        BorderThickness="1" 
-                        Cursor="Hand" 
-                        MouseDown="Border_MouseDown" 
-                        Width="110">
+                            <Border Margin="2" 
+                    BorderBrush="DarkGray" 
+                    BorderThickness="1" 
+                    Cursor="Hand" 
+                    Width="110"
+                                    MouseDown="Border_MouseDown" >
+                                <Border.Style>
+                                    <Style TargetType="Border">
+                                        <Setter Property="Background" Value="Green" />
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Status}" Value="false">
+                                                <Setter Property="Background" Value="Red" />
+                                                <Setter Property="Cursor" Value="No" />
+                                                <!-- Disable cursor -->
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Quantity}" Value="0">
+                                                <Setter Property="Background" Value="Red" />
+                                                <Setter Property="Cursor" Value="No" />
+                                                <!-- Disable cursor -->
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Border.Style>
                                 <StackPanel HorizontalAlignment="Center">
                                     <!-- Display product image -->
                                     <Image Source="{Binding ImagePath}" Width="50" Height="50" />
-
                                     <!-- Display product name -->
                                     <TextBlock Text="{Binding ProductName}" FontWeight="Bold" 
-                                   HorizontalAlignment="Center" />
-
+                               HorizontalAlignment="Center" />
                                     <!-- Display product price -->
                                     <TextBlock Text="{Binding Price, StringFormat='Giá: {0:C}'}" 
-                                   HorizontalAlignment="Center" />
+                               HorizontalAlignment="Center" />
                                 </StackPanel>
                             </Border>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
+
             </Grid>
-            <Button Content="Next" HorizontalAlignment="Left" Margin="99,705,0,0" VerticalAlignment="Top" Click="Button_Click" RenderTransformOrigin="-10.088,3.058" Height="69" Width="86" Background="#FF2455DA"/>
-            <Button Content="Before" HorizontalAlignment="Left" Margin="10,705,0,0" VerticalAlignment="Top" Click="Button_Click_1" Width="84" Height="69" Background="#FF2455DA"/>
 
 
 
