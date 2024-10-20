@@ -1,0 +1,193 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\SE\\ky9\\PRN212\\HighLand\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|f:\\se\\ky9\\prn212\\highland\\highland\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|solutionrelative:highland\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|f:\\se\\ky9\\prn212\\highland\\highland\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|solutionrelative:highland\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|f:\\se\\ky9\\prn212\\highland\\highland\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|solutionrelative:highland\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|f:\\se\\ky9\\prn212\\highland\\highland\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|solutionrelative:highland\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|f:\\se\\ky9\\prn212\\highland\\highland\\repositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|solutionrelative:highland\\repositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|f:\\se\\ky9\\prn212\\highland\\highland\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|solutionrelative:highland\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|f:\\se\\ky9\\prn212\\highland\\highland\\models\\highlandcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|solutionrelative:highland\\models\\highlandcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|f:\\se\\ky9\\prn212\\highland\\highland\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|solutionrelative:highland\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|f:\\se\\ky9\\prn212\\highland\\highland\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|solutionrelative:highland\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|f:\\se\\ky9\\prn212\\highland\\highland\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|solutionrelative:highland\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "F:\\SE\\ky9\\PRN212\\HighLand\\HighLand\\repositories\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "HighLand\\repositories\\GenericRepository.cs",
+              "ToolTip": "F:\\SE\\ky9\\PRN212\\HighLand\\HighLand\\repositories\\GenericRepository.cs",
+              "RelativeToolTip": "HighLand\\repositories\\GenericRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T03:38:49.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "F:\\SE\\ky9\\PRN212\\HighLand\\HighLand\\repositories\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "HighLand\\repositories\\IGenericRepository.cs",
+              "ToolTip": "F:\\SE\\ky9\\PRN212\\HighLand\\HighLand\\repositories\\IGenericRepository.cs",
+              "RelativeToolTip": "HighLand\\repositories\\IGenericRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T03:38:20.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Product.cs",
+              "DocumentMoniker": "F:\\SE\\ky9\\PRN212\\HighLand\\HighLand\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "HighLand\\Models\\Product.cs",
+              "ToolTip": "F:\\SE\\ky9\\PRN212\\HighLand\\HighLand\\Models\\Product.cs",
+              "RelativeToolTip": "HighLand\\Models\\Product.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA1wBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T16:55:19.243Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "F:\\SE\\ky9\\PRN212\\HighLand\\HighLand\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "HighLand\\AssemblyInfo.cs",
+              "ToolTip": "F:\\SE\\ky9\\PRN212\\HighLand\\HighLand\\AssemblyInfo.cs",
+              "RelativeToolTip": "HighLand\\AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T16:12:31.209Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "F:\\SE\\ky9\\PRN212\\HighLand\\HighLand\\App.xaml.cs",
+              "RelativeDocumentMoniker": "HighLand\\App.xaml.cs",
+              "ToolTip": "F:\\SE\\ky9\\PRN212\\HighLand\\HighLand\\App.xaml.cs",
+              "RelativeToolTip": "HighLand\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T16:12:23.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "F:\\SE\\ky9\\PRN212\\HighLand\\HighLand\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "HighLand\\MainWindow.xaml",
+              "ToolTip": "F:\\SE\\ky9\\PRN212\\HighLand\\HighLand\\MainWindow.xaml",
+              "RelativeToolTip": "HighLand\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-19T16:06:49.555Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "F:\\SE\\ky9\\PRN212\\HighLand\\HighLand\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "HighLand\\MainWindow.xaml.cs",
+              "ToolTip": "F:\\SE\\ky9\\PRN212\\HighLand\\HighLand\\MainWindow.xaml.cs",
+              "RelativeToolTip": "HighLand\\MainWindow.xaml.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAzwCUAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T16:06:47.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HighLandContext.cs",
+              "DocumentMoniker": "F:\\SE\\ky9\\PRN212\\HighLand\\HighLand\\Models\\HighLandContext.cs",
+              "RelativeDocumentMoniker": "HighLand\\Models\\HighLandContext.cs",
+              "ToolTip": "F:\\SE\\ky9\\PRN212\\HighLand\\HighLand\\Models\\HighLandContext.cs",
+              "RelativeToolTip": "HighLand\\Models\\HighLandContext.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAkwAYAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T16:09:45.975Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.xaml",
+              "DocumentMoniker": "F:\\SE\\ky9\\PRN212\\HighLand\\HighLand\\App.xaml",
+              "RelativeDocumentMoniker": "HighLand\\App.xaml",
+              "ToolTip": "F:\\SE\\ky9\\PRN212\\HighLand\\HighLand\\App.xaml",
+              "RelativeToolTip": "HighLand\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-19T16:11:56.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "F:\\SE\\ky9\\PRN212\\HighLand\\HighLand\\Models\\Customer.cs",
+              "RelativeDocumentMoniker": "HighLand\\Models\\Customer.cs",
+              "ToolTip": "F:\\SE\\ky9\\PRN212\\HighLand\\HighLand\\Models\\Customer.cs",
+              "RelativeToolTip": "HighLand\\Models\\Customer.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T16:09:50.118Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
