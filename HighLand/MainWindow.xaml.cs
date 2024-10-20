@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace HighLand
 {
@@ -18,35 +19,81 @@ namespace HighLand
     /// </summary>
     public partial class MainWindow : Window
     {
-        IGenericRepository<Product> productRepository = new GenericRepository<Product>();
+        private IGenericRepository<Product> productRepository = new GenericRepository<Product>();
+        private IGenericRepository<User> userRepository = new GenericRepository<User>();
+        private IGenericRepository<Role> roleRepository = new GenericRepository<Role>();
+        private IGenericRepository<Order> orderRepository = new GenericRepository<Order>();
         private int currentOffset = 0;
+        private List<CartItem> cartItems = new List<CartItem>();
+
+        public decimal TotalAmount => cartItems.Sum(item => item.Total);
+        public decimal TaxAmount => TotalAmount * 0.20m;
+        public decimal FinalAmount => TotalAmount + TaxAmount;
+        User user = new User();
+
+
         public MainWindow()
         {
             InitializeComponent();
             LoadProducts();
+            LoadCarts();
+            LoadUser();
+
+        }
+        private void LoadUser()
+        {
+            user = userRepository.Get(x => x.UserId == 1);
+            string role = roleRepository.Get(x => x.RoleId == user.RoleId).RoleName;
+            txtName.Text = $"{role}: {user.FullName}";
         }
 
+
+        private void LoadCarts()
+        {
+            CartListBox.ItemsSource = null;
+            CartListBox.ItemsSource = cartItems;
+        }
         private void LoadProducts()
         {
+            txtDate.Text = DateTime.UtcNow.ToString("MMMM dd, dddd hh:mm:ss tt");
+
             var products = productRepository.GetAll().Skip(currentOffset).Take(30).ToList();
             ProductListBox.ItemsSource = products;
         }
+
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (sender is FrameworkElement element && element.DataContext is Product product)
             {
-                int productId = product.ProductId; 
-                MessageBox.Show(""+productId);
+                if (product.Status == true && product.Quantity > 0)
+                {
+                    CartItem cartItem = new CartItem
+                    {
+                        ProductId = product.ProductId,
+                        ProductName = product.ProductName,
+                        Price = product.Price,
+                        Quantity = 1,
+                    };
+
+                    AddItem(cartItem);
+                    LoadCarts();  
+                    UpdateTotalAmount(); 
+                }
+                else
+                {
+                    MessageBox.Show("Sản phẩm không khả dụng.");
+                }
             }
         }
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             if (currentOffset <= productRepository.GetAll().Count() - 30)
             {
                 currentOffset += 30;
+                LoadProducts();
             }
-            LoadProducts();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -54,11 +101,156 @@ namespace HighLand
             if (currentOffset >= 30)
             {
                 currentOffset -= 30;
+                LoadProducts();
             }
-            LoadProducts();
+
             Application.Current.Properties["UserName"] = "John Doe";
+        }
+
+        public void AddItem(CartItem item)
+        {
+            var existingItem = cartItems.FirstOrDefault(i => i.ProductName == item.ProductName);
+            if (existingItem != null)
+            {
+                existingItem.Quantity++;
+            }
+            else
+            {
+                cartItems.Add(item);
+            }
+        }
+
+        private void IncreaseQuantity_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button button && button.DataContext is CartItem cartItem)
+            {
+                cartItem.Quantity++;
+                CartListBox.Items.Refresh();
+            }
+            UpdateTotalAmount();
+        }
+
+        private void DecreaseQuantity_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button button && button.DataContext is CartItem cartItem)
+            {
+                if (cartItem.Quantity > 1)
+                {
+                    cartItem.Quantity--;
+                    CartListBox.Items.Refresh();
+                }
+                else
+                {
+                    cartItems.Remove(cartItem);
+                    LoadCarts();
+                    CartListBox.Items.Refresh();
+                }
+            }
+            UpdateTotalAmount();
+        }
+
+        private void UpdateTotalAmount()
+        {
+            txtTotalAmount.Text = TotalAmount.ToString("C");
+            txtTaxAmount.Text = TaxAmount.ToString("C");
+            txtFinalAmount.Text = FinalAmount.ToString("C");
+            txtOrderedItems.Text = $"{cartItems.Sum(item => item.Quantity)}/{cartItems.Count()}";
+
+        }
+
+        private void btnReOrder(object sender, RoutedEventArgs e)
+        {
+            cartItems = new List<CartItem>();
+            UpdateTotalAmount();
+            LoadCarts();
+        }
+
+        private void btnEnter(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show(
+                "Bạn có chắc chắn muốn xác nhận đơn hàng này không?",
+                "Xác Nhận Đơn Hàng",
+                MessageBoxButton.YesNo,
+                MessageBoxImage.Question
+            );
+
+            if (result == MessageBoxResult.Yes)
+            {
+                ConfirmOrder();
+            }
+        }
 
 
+        private void ConfirmOrder()
+        {
+            if (cartItems.Count == 0)
+            {
+                MessageBox.Show("Giỏ hàng rỗng. Không thể xác nhận đơn hàng.");
+                return;
+            }
+
+            Order newOrder = new Order
+            {
+                OrderDate = DateTime.Now,
+                UserId = user.UserId,
+                // CustomerId = selectedCustomer?.CustomerId, 
+                TotalAmount = TotalAmount,
+                Tax = TaxAmount,
+                //Discount = CalculateDiscount(cartItems),
+                Status = true,
+                //PaymentMethod = selectedPaymentMethod, 
+                OrderType = true,
+
+                //TableId = currentTableId 
+            };
+
+            foreach (var item in cartItems)
+            {
+                OrderDetail orderDetail = new OrderDetail
+                {
+                    ProductId = item.ProductId,
+                    Quantity = item.Quantity,
+                    Price = item.Price,
+                    TotalPrice = item.Price * item.Quantity
+                };
+                newOrder.OrderDetails.Add(orderDetail);
+
+                UpdateInventory(item.ProductId, item.Quantity);
+            }
+
+            orderRepository.Add(newOrder);
+
+            MessageBox.Show("Đơn hàng đã được xác nhận thành công!");
+            cartItems.Clear();
+            LoadCarts();
+            UpdateTotalAmount();
+        }
+
+
+        private void UpdateInventory(int productId, int quantitySold)
+        {
+            var product = productRepository.Get(p => p.ProductId == productId);
+            if (product != null)
+            {
+                product.Quantity -= quantitySold;
+                productRepository.Update(product);
+            }
+        }
+
+        private void btnExit(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show(
+        "Bạn có chắc chắn muốn thoát ứng dụng không?",
+        "Xác Nhận Thoát",
+        MessageBoxButton.YesNo,
+        MessageBoxImage.Question
+    );
+
+            // Nếu người dùng chọn Yes, thoát ứng dụng
+            if (result == MessageBoxResult.Yes)
+            {
+                Application.Current.Shutdown();
+            }
         }
     }
 }
