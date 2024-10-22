@@ -17,32 +17,23 @@
             <Grid Margin="0,621,-21,67" Background="#FFD0E82B">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
-                    <!-- Total row -->
                     <RowDefinition Height="Auto" />
-                    <!-- Tax row -->
                     <RowDefinition Height="Auto" />
-                    <!-- Space between -->
                     <RowDefinition Height="Auto" />
-                    <!-- Final total row -->
                 </Grid.RowDefinitions>
 
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="210*" />
                     <ColumnDefinition Width="181*"/>
-                    <!-- First column takes remaining space -->
                     <ColumnDefinition Width="Auto" />
-                    <!-- Second column fits content -->
                 </Grid.ColumnDefinitions>
 
-                <!-- Total row -->
                 <TextBlock Text="Total:" FontWeight="Bold" VerticalAlignment="Center" Margin="10,0,0,0" Grid.ColumnSpan="2" />
                 <TextBlock x:Name="txtTotalAmount" Text="{Binding TotalAmount, StringFormat=C}" FontWeight="Bold" VerticalAlignment="Center" Margin="10,0,20,0" Grid.Column="2" />
 
-                <!-- Tax row -->
                 <TextBlock Text="Tax (20%):" FontWeight="Bold" VerticalAlignment="Center" Margin="10,0,0,0" Grid.Row="1" Grid.ColumnSpan="2" />
                 <TextBlock x:Name="txtTaxAmount" Text="{Binding TaxAmount, StringFormat=C}" FontWeight="Bold" VerticalAlignment="Center" Margin="10,0,20,0" Grid.Column="2" Grid.Row="1" />
 
-                <!-- Empty space row -->
                 <TextBlock Text="" Grid.Row="1" Margin="0,11,0,7" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" >
                     <TextBlock.RenderTransform>
                         <TransformGroup>
@@ -54,35 +45,28 @@
                     </TextBlock.RenderTransform>
                 </TextBlock>
 
-                <!-- Final total row -->
                 <TextBlock Text="Total Amount (including Tax):" FontWeight="Bold" VerticalAlignment="Center" Margin="10,0,0,0" Grid.Row="3" Grid.ColumnSpan="2" />
                 <TextBlock x:Name="txtFinalAmount" Text="{Binding FinalAmount, StringFormat=C}" FontWeight="Bold" VerticalAlignment="Center" Margin="10,0,20,0" Grid.Column="2" Grid.Row="3" />
             </Grid>
             <Grid Margin="0,77,0,163">
                 <StackPanel Width="380" Margin="10">
-                    <!-- ListBox for Cart Items -->
                     <ListBox x:Name="CartListBox" Margin="0,0,0,10">
                         <ListBox.Template>
                             <ControlTemplate>
                                 <Grid>
-                                    <!-- Header Row -->
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="Auto"/>
                                         <RowDefinition Height="*"/>
                                     </Grid.RowDefinitions>
 
-                                    <!-- Header -->
                                     <StackPanel Orientation="Horizontal" Background="LightGray" Grid.Row="0">
                                         <TextBlock Text="Tên" Width="120" />
                                         <TextBlock Text="Giá" Width="60" />
                                         <TextBlock Text="SL" Width="50" />
-                                        <!-- Shortened to "SL" -->
                                         <TextBlock Text="Tổng" Width="60" />
                                         <TextBlock Width="30" />
-                                        <!-- Empty for spacing -->
                                     </StackPanel>
 
-                                    <!-- Item List -->
                                     <ItemsPresenter Grid.Row="1" />
                                 </Grid>
                             </ControlTemplate>
@@ -95,7 +79,6 @@
                                     <TextBlock Text="{Binding Quantity}" Width="50" />
                                     <TextBlock Text="{Binding Total, StringFormat=C}" Width="60" />
 
-                                    <!-- Buttons for Increasing and Decreasing Quantity -->
                                     <StackPanel Orientation="Horizontal" Width="30">
                                         <Button Content="+" Click="IncreaseQuantity_Click" DataContext="{Binding}" Width="15" />
                                         <Button Content="-" Click="DecreaseQuantity_Click" DataContext="{Binding}" Width="15" />
@@ -116,7 +99,6 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
 
-                <!-- Ordered Items row -->
                 <TextBlock Text="Ordered Items:" FontWeight="Bold" Foreground="White" VerticalAlignment="Center" Margin="10,0,34,0" FontSize="20" />
                 <TextBlock x:Name="txtOrderedItems" Text="0/0" FontWeight="Bold" Foreground="White" VerticalAlignment="Center" Margin="327,0,0,0" FontSize="20" />
             </Grid>
