@@ -139,3 +139,4 @@ F:\SE\ky9\PRN212\HighLand\HighLand\bin\Debug\net8.0-windows\runtimes\win\lib\net
 F:\SE\ky9\PRN212\HighLand\HighLand\obj\Debug\net8.0-windows\HighLand.csproj.AssemblyReference.cache
 F:\SE\ky9\PRN212\HighLand\HighLand\obj\Debug\net8.0-windows\HighLand.csproj.Up2Date
 F:\SE\ky9\PRN212\HighLand\HighLand\obj\Debug\net8.0-windows\HighLand.sourcelink.json
+F:\SE\ky9\PRN212\HighLand\HighLand\bin\Debug\net8.0-windows\appsettings.json
