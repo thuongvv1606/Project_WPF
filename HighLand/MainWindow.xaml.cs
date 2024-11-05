@@ -1,5 +1,6 @@
 ﻿using HighLand.Models;
 using HighLand.repositories;
+using System.Collections.ObjectModel;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,8 +24,10 @@ namespace HighLand
         private IGenericRepository<User> userRepository = new GenericRepository<User>();
         private IGenericRepository<Role> roleRepository = new GenericRepository<Role>();
         private IGenericRepository<Order> orderRepository = new GenericRepository<Order>();
+        private IGenericRepository<ProductCategory> categoryRepository = new GenericRepository<ProductCategory>();
         private int currentOffset = 0;
         private List<CartItem> cartItems = new List<CartItem>();
+        public ObservableCollection<ProductCategory> Categories { get; set; }
 
         public decimal TotalAmount => cartItems.Sum(item => item.Total);
         public decimal TaxAmount => TotalAmount * 0.20m;
@@ -35,11 +38,31 @@ namespace HighLand
         public MainWindow()
         {
             InitializeComponent();
+            LoadCategory();
             LoadProducts();
             LoadCarts();
             LoadUser();
 
         }
+
+        private void LoadCategory()
+        {
+            Categories = new ObservableCollection<ProductCategory>
+    {
+        new ProductCategory {CategoryId = -2, CategoryName = "Tất cả sản phẩm" },
+        new ProductCategory { CategoryId = -1, CategoryName = "Bán chạy" },
+    };
+
+            var additionalCategories = categoryRepository.GetAll();
+
+            foreach (var category in additionalCategories)
+            {
+                Categories.Add(category);
+            }
+
+            CategoryListBox.ItemsSource = Categories;
+        }
+
         private void LoadUser()
         {
             user = userRepository.Get(x => x.UserId == 1);
@@ -76,8 +99,8 @@ namespace HighLand
                     };
 
                     AddItem(cartItem);
-                    LoadCarts();  
-                    UpdateTotalAmount(); 
+                    LoadCarts();
+                    UpdateTotalAmount();
                 }
                 else
                 {
@@ -250,6 +273,42 @@ namespace HighLand
             if (result == MessageBoxResult.Yes)
             {
                 Application.Current.Shutdown();
+            }
+        }
+
+        private void CategoryListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var products = new List<Product>();
+            var selectedRow = CategoryListBox.SelectedItem as ProductCategory;
+            if (selectedRow != null)
+            {
+                if (selectedRow.CategoryId == -2)
+                {
+                    products = productRepository.GetAll().Skip(currentOffset).Take(30).ToList();
+                    ProductListBox.ItemsSource = products;
+
+                }
+                else if (selectedRow.CategoryId == -1)
+                {
+                    products = productRepository.GetAllIncluding(x => x.OrderDetails)
+    .Select(p => new
+    {
+        Product = p,
+        OrderCount = p.OrderDetails.Sum(od => (int?)od.Quantity) ?? 0 // Đảm bảo không có giá trị null
+    })
+    .OrderByDescending(x => x.OrderCount) // Sắp xếp theo số lượng đơn hàng
+    .Skip(currentOffset) // Bỏ qua các sản phẩm trước đó
+    .Take(30) // Lấy 30 sản phẩm tiếp theo
+    .Select(x => x.Product) // Chọn sản phẩm từ đối tượng
+    .ToList();
+                    ProductListBox.ItemsSource = products;
+                }
+                else
+                {
+                    products = productRepository.GetAll().Where(x => x.CategoryId == selectedRow.CategoryId).Skip(currentOffset).Take(30).ToList();
+                    ProductListBox.ItemsSource = products;
+
+                }
             }
         }
     }

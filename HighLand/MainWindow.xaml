@@ -106,22 +106,65 @@
 
         </Grid>
         <Grid Margin="400,0,0,0" Background="#FFE0D0F4">
-            <Grid Margin="0,0,0,629">
-                <Button x:Name="btnBanhNgot" Content="Banh Ngot" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="55" Width="101" Background="#FFF06666"/>
-                <Button x:Name="btnTraNong" Content="Tra" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top" Height="55" Width="101" Background="#FFF06666"/>
-                <Button x:Name="btnBanChay" Content="BanChay" HorizontalAlignment="Left" Margin="116,10,0,0" VerticalAlignment="Top" Height="55" Width="101" Background="#FFF06666"/>
-                <Button x:Name="btnSWETTSOUP" Content="SWETTSOUP" HorizontalAlignment="Left" Margin="222,10,0,0" VerticalAlignment="Top" Height="55" Width="101" Background="#FFF06666"/>
-                <Button x:Name="btnCaPhe" Content="Ca Phe" HorizontalAlignment="Left" Margin="328,10,0,0" VerticalAlignment="Top" Height="55" Width="101" Background="#FFF06666"/>
-                <Button Content="Espresso(Ice)" HorizontalAlignment="Left" Margin="434,10,0,0" VerticalAlignment="Top" Height="55" Width="101" Background="#FFF06666"/>
-                <Button x:Name="btnTraNhietDoi" Content="Trà Nhiệt Đới" HorizontalAlignment="Left" Margin="116,70,0,0" VerticalAlignment="Top" Height="55" Width="101" Background="#FFF06666"/>
-                <Button Content="Espresso(Hot)" HorizontalAlignment="Left" Margin="540,10,0,0" VerticalAlignment="Top" Height="55" Width="101" Background="#FFF06666"/>
-                <Button x:Name="btnTraDa" Content="Trà (Đá)" HorizontalAlignment="Left" Margin="646,10,0,0" VerticalAlignment="Top" Height="55" Width="130" Background="#FFF06666"/>
-                <Button x:Name="btnToppint" Content="Topping" HorizontalAlignment="Left" Margin="222,70,0,0" VerticalAlignment="Top" Height="55" Width="101" Background="#FFF06666"/>
-                <Button x:Name="btnFreeze" Content="Freeze" HorizontalAlignment="Left" Margin="328,70,0,0" VerticalAlignment="Top" Height="55" Width="101" Background="#FFF06666"/>
-                <Button x:Name="btnOrther" Content="Orther" HorizontalAlignment="Left" Margin="434,70,0,0" VerticalAlignment="Top" Height="55" Width="101" Background="#FFF06666"/>
-                <Button x:Name="btnNuocEp" Content="Nước Ép" HorizontalAlignment="Left" Margin="540,70,0,0" VerticalAlignment="Top" Height="55" Width="101" Background="#FFF06666"/>
-                <Button Content="Button" HorizontalAlignment="Left" Margin="646,70,0,0" VerticalAlignment="Top" Height="55" Width="130" Background="#FFF06666"/>
+            <Grid Margin="0,0,0,650">
+                <ListBox x:Name="CategoryListBox" 
+             ItemsSource="{Binding Categories}" 
+             HorizontalContentAlignment="Stretch" 
+             Background="#FFE0D0F4" 
+             Margin="0,0,0,-26" SelectionChanged="CategoryListBox_SelectionChanged">
+
+                    <!-- Using UniformGrid to arrange items -->
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <UniformGrid Rows="2" Columns="6" />
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+
+                    <!-- Defining DataTemplate for each item -->
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Border Margin="2" 
+                        BorderBrush="DarkGray" 
+                        BorderThickness="1" 
+                        Cursor="Hand" 
+                        Width="110" 
+                        Height="55">
+                                <Border.Style>
+                                    <Style TargetType="Border">
+                                        <Setter Property="Background" Value="LightGreen" />
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding IsPopular}" Value="true">
+                                                <Setter Property="Background" Value="Gold" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Border.Style>
+                                <!-- Sử dụng Grid để căn giữa -->
+                                <Grid>
+                                    <TextBlock Text="{Binding CategoryName}" 
+                                   FontWeight="Bold" 
+                                   FontSize="16" 
+                                   Foreground="Black" 
+                                   HorizontalAlignment="Center" 
+                                   VerticalAlignment="Center">
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock">
+                                                <Setter Property="Foreground" Value="Black" />
+                                                <Style.Triggers>
+                                                    <Trigger Property="IsMouseOver" Value="True">
+                                                        <Setter Property="Foreground" Value="Red" />
+                                                    </Trigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
             </Grid>
+
             <Grid Margin="0,684,0,0" Background="#FF9BE511">
                 <Button Content="Before"  Click="Button_Click_1" Margin="10,10,705,10"></Button>
                 <Button Content="Next"  Click="Button_Click" Margin="124,10,591,10"></Button>
