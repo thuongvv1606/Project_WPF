@@ -1,0 +1,268 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\PRN212.4\\Project\\Project_WPF\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|d:\\prn212.4\\project\\project_wpf\\highland\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|solutionrelative:highland\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|d:\\prn212.4\\project\\project_wpf\\highland\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|solutionrelative:highland\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|D:\\PRN212.4\\Project\\Project_WPF\\highland\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|solutionrelative:highland\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|d:\\prn212.4\\project\\project_wpf\\highland\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|solutionrelative:highland\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|d:\\prn212.4\\project\\project_wpf\\highland\\tablewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|solutionrelative:highland\\tablewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|D:\\PRN212.4\\Project\\Project_WPF\\highland\\firstorderwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|solutionrelative:highland\\firstorderwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|D:\\PRN212.4\\Project\\Project_WPF\\highland\\firstorderwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|solutionrelative:highland\\firstorderwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|D:\\PRN212.4\\Project\\Project_WPF\\highland\\repositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|solutionrelative:highland\\repositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|D:\\PRN212.4\\Project\\Project_WPF\\highland\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|solutionrelative:highland\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|D:\\PRN212.4\\Project\\Project_WPF\\highland\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|solutionrelative:highland\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|D:\\PRN212.4\\Project\\Project_WPF\\highland\\tablewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|solutionrelative:highland\\tablewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|D:\\PRN212.4\\Project\\Project_WPF\\highland\\models\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|solutionrelative:highland\\models\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|D:\\PRN212.4\\Project\\Project_WPF\\highland\\models\\table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|solutionrelative:highland\\models\\table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|D:\\PRN212.4\\Project\\Project_WPF\\highland\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|solutionrelative:highland\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|D:\\PRN212.4\\Project\\Project_WPF\\highland\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E47203-EBC9-454C-A89F-2FC5C0E166A4}|HighLand\\HighLand.csproj|solutionrelative:highland\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\PRN212.4\\Project\\Project_WPF\\HighLand\\appsettings.json",
+              "RelativeDocumentMoniker": "HighLand\\appsettings.json",
+              "ToolTip": "D:\\PRN212.4\\Project\\Project_WPF\\HighLand\\appsettings.json",
+              "RelativeToolTip": "HighLand\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-05T07:08:52.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login.xaml",
+              "DocumentMoniker": "D:\\PRN212.4\\Project\\Project_WPF\\HighLand\\Login.xaml",
+              "RelativeDocumentMoniker": "HighLand\\Login.xaml",
+              "ToolTip": "D:\\PRN212.4\\Project\\Project_WPF\\HighLand\\Login.xaml",
+              "RelativeToolTip": "HighLand\\Login.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-05T06:57:58.649Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login.xaml.cs",
+              "DocumentMoniker": "D:\\PRN212.4\\Project\\Project_WPF\\HighLand\\Login.xaml.cs",
+              "RelativeDocumentMoniker": "HighLand\\Login.xaml.cs",
+              "ToolTip": "D:\\PRN212.4\\Project\\Project_WPF\\HighLand\\Login.xaml.cs",
+              "RelativeToolTip": "HighLand\\Login.xaml.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAowD4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T06:57:20.456Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "D:\\PRN212.4\\Project\\Project_WPF\\HighLand\\repositories\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "HighLand\\repositories\\IGenericRepository.cs",
+              "ToolTip": "D:\\PRN212.4\\Project\\Project_WPF\\HighLand\\repositories\\IGenericRepository.cs",
+              "RelativeToolTip": "HighLand\\repositories\\IGenericRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T05:44:54.477Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FirstOrderWindow.xaml.cs",
+              "DocumentMoniker": "D:\\PRN212.4\\Project\\Project_WPF\\HighLand\\FirstOrderWindow.xaml.cs",
+              "RelativeDocumentMoniker": "HighLand\\FirstOrderWindow.xaml.cs",
+              "ToolTip": "D:\\PRN212.4\\Project\\Project_WPF\\HighLand\\FirstOrderWindow.xaml.cs",
+              "RelativeToolTip": "HighLand\\FirstOrderWindow.xaml.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAACUAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T02:18:31.167Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FirstOrderWindow.xaml",
+              "DocumentMoniker": "D:\\PRN212.4\\Project\\Project_WPF\\HighLand\\FirstOrderWindow.xaml",
+              "RelativeDocumentMoniker": "HighLand\\FirstOrderWindow.xaml",
+              "ToolTip": "D:\\PRN212.4\\Project\\Project_WPF\\HighLand\\FirstOrderWindow.xaml",
+              "RelativeToolTip": "HighLand\\FirstOrderWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-05T02:13:16.421Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.xaml",
+              "DocumentMoniker": "D:\\PRN212.4\\Project\\Project_WPF\\HighLand\\App.xaml",
+              "RelativeDocumentMoniker": "HighLand\\App.xaml",
+              "ToolTip": "D:\\PRN212.4\\Project\\Project_WPF\\HighLand\\App.xaml",
+              "RelativeToolTip": "HighLand\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-05T01:45:45.003Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TableWindow.xaml.cs",
+              "DocumentMoniker": "D:\\PRN212.4\\Project\\Project_WPF\\HighLand\\TableWindow.xaml.cs",
+              "RelativeDocumentMoniker": "HighLand\\TableWindow.xaml.cs",
+              "ToolTip": "D:\\PRN212.4\\Project\\Project_WPF\\HighLand\\TableWindow.xaml.cs",
+              "RelativeToolTip": "HighLand\\TableWindow.xaml.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T01:32:38.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Table.cs",
+              "DocumentMoniker": "D:\\PRN212.4\\Project\\Project_WPF\\HighLand\\Models\\Table.cs",
+              "RelativeDocumentMoniker": "HighLand\\Models\\Table.cs",
+              "ToolTip": "D:\\PRN212.4\\Project\\Project_WPF\\HighLand\\Models\\Table.cs",
+              "RelativeToolTip": "HighLand\\Models\\Table.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T01:30:20.728Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TableWindow.xaml",
+              "DocumentMoniker": "D:\\PRN212.4\\Project\\Project_WPF\\HighLand\\TableWindow.xaml",
+              "RelativeDocumentMoniker": "HighLand\\TableWindow.xaml",
+              "ToolTip": "D:\\PRN212.4\\Project\\Project_WPF\\HighLand\\TableWindow.xaml",
+              "RelativeToolTip": "HighLand\\TableWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-05T01:25:11.299Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "OrderDetail.cs",
+              "DocumentMoniker": "D:\\PRN212.4\\Project\\Project_WPF\\HighLand\\Models\\OrderDetail.cs",
+              "RelativeDocumentMoniker": "HighLand\\Models\\OrderDetail.cs",
+              "ToolTip": "D:\\PRN212.4\\Project\\Project_WPF\\HighLand\\Models\\OrderDetail.cs",
+              "RelativeToolTip": "HighLand\\Models\\OrderDetail.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T18:32:55.079Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\PRN212.4\\Project\\Project_WPF\\HighLand\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "HighLand\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\PRN212.4\\Project\\Project_WPF\\HighLand\\MainWindow.xaml.cs",
+              "RelativeToolTip": "HighLand\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAB0BAAAAAAAAAAAhwC0BAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T17:02:47.681Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\PRN212.4\\Project\\Project_WPF\\HighLand\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "HighLand\\MainWindow.xaml",
+              "ToolTip": "D:\\PRN212.4\\Project\\Project_WPF\\HighLand\\MainWindow.xaml",
+              "RelativeToolTip": "HighLand\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-04T16:19:49.68Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Order.cs",
+              "DocumentMoniker": "D:\\PRN212.4\\Project\\Project_WPF\\HighLand\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "HighLand\\Models\\Order.cs",
+              "ToolTip": "D:\\PRN212.4\\Project\\Project_WPF\\HighLand\\Models\\Order.cs",
+              "RelativeToolTip": "HighLand\\Models\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T18:32:37.916Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\PRN212.4\\Project\\Project_WPF\\HighLand\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "HighLand\\Models\\Product.cs",
+              "ToolTip": "D:\\PRN212.4\\Project\\Project_WPF\\HighLand\\Models\\Product.cs",
+              "RelativeToolTip": "HighLand\\Models\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T18:31:08.079Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

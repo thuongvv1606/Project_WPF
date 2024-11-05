@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "F:\\SE\\ky9\\PRN212\\HighLand\\HighLand\\HighLand.csproj": {}
+    "D:\\PRN212.4\\Project\\Project_WPF\\HighLand\\HighLand.csproj": {}
   },
   "projects": {
-    "F:\\SE\\ky9\\PRN212\\HighLand\\HighLand\\HighLand.csproj": {
+    "D:\\PRN212.4\\Project\\Project_WPF\\HighLand\\HighLand.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\SE\\ky9\\PRN212\\HighLand\\HighLand\\HighLand.csproj",
+        "projectUniqueName": "D:\\PRN212.4\\Project\\Project_WPF\\HighLand\\HighLand.csproj",
         "projectName": "HighLand",
-        "projectPath": "F:\\SE\\ky9\\PRN212\\HighLand\\HighLand\\HighLand.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "F:\\SE\\ky9\\PRN212\\HighLand\\HighLand\\obj\\",
+        "projectPath": "D:\\PRN212.4\\Project\\Project_WPF\\HighLand\\HighLand.csproj",
+        "packagesPath": "C:\\Users\\ngoth\\.nuget\\packages\\",
+        "outputPath": "D:\\PRN212.4\\Project\\Project_WPF\\HighLand\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ngoth\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -80,7 +79,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
