@@ -1,0 +1,65 @@
+﻿<Window x:Class="HighLand.FirstOrderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HighLand"
+        mc:Ignorable="d"
+        Title="FirstOrderWindow" Height="800" Width="1200"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid Margin="821,0,0,222">
+
+        </Grid>
+
+        <Grid HorizontalAlignment="Left" Width="821" Margin="0,0,0,222">
+            <!-- Định nghĩa hàng cho Grid -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <!-- Hàng dành cho tiêu đề -->
+                <RowDefinition Height="*"/>
+                <!-- Hàng dành cho nội dung khác (nếu có) -->
+                <RowDefinition Height="Auto"/>
+                <!-- Hàng dành cho nút chọn -->
+            </Grid.RowDefinitions>
+
+            <!-- Tiêu đề -->
+            <TextBlock Text="Vui lòng chọn kiểu order" 
+               FontSize="18" 
+               FontWeight="Bold" 
+               Foreground="Black" 
+               HorizontalAlignment="Center" 
+               Margin="10" 
+               Grid.Row="0"/>
+
+            <!-- Các nút "Mang về" và "Ăn tại quán" -->
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1">
+                <Button Content="Mang về" 
+                FontSize="16" 
+                FontWeight="Bold" 
+                Background="DodgerBlue" 
+                Foreground="White" 
+                Width="500" 
+                Height="100" 
+                Margin="10" Click="Button_Click"/>
+                <Button Content="Ăn tại quán" 
+                FontSize="16" 
+                FontWeight="Bold" 
+                Background="DodgerBlue" 
+                Foreground="White" 
+                Width="500" 
+                Height="100" 
+                Margin="10" Click="Button_Click_1"/>
+            </StackPanel>
+        </Grid>
+
+
+
+
+        <Image Source="F:\SE\ky9\PRN212\HighLand\HighLand\images\banner.jfif" HorizontalAlignment="Left" Height="238" Margin="0,546,0,0" VerticalAlignment="Top" Width="569"/>
+        <Image Source="F:\SE\ky9\PRN212\HighLand\HighLand\images\banner.jfif" HorizontalAlignment="Left" Height="238" Margin="562,546,0,0" VerticalAlignment="Top" Width="569"/>
+        <Image Source="F:\SE\ky9\PRN212\HighLand\HighLand\images\banner.jfif" HorizontalAlignment="Left" Height="238" Margin="1124,546,0,0" VerticalAlignment="Top" Width="569"/>
+
+    </Grid>
+</Window>
+

@@ -32,16 +32,18 @@ namespace HighLand
         public decimal TotalAmount => cartItems.Sum(item => item.Total);
         public decimal TaxAmount => TotalAmount * 0.20m;
         public decimal FinalAmount => TotalAmount + TaxAmount;
+        public Models.Table Table { get; private set; }
         User user = new User();
 
 
-        public MainWindow()
+        public MainWindow(Models.Table table)
         {
             InitializeComponent();
             LoadCategory();
             LoadProducts();
             LoadCarts();
             LoadUser();
+            Table = table;
 
         }
 
@@ -211,21 +213,20 @@ namespace HighLand
                 MessageBox.Show("Giỏ hàng rỗng. Không thể xác nhận đơn hàng.");
                 return;
             }
-
-            Order newOrder = new Order
+            Order newOrder = new Order();
+            newOrder.OrderDate = DateTime.Now;
+            newOrder.UserId = user.UserId;
+            // CustomerId = selectedCustomer?.CustomerId, 
+            newOrder.TotalAmount = TotalAmount;
+            newOrder.Tax = TaxAmount;
+            // Discount = CalculateDiscount(cartItems),
+            newOrder.Status = true;
+            // PaymentMethod = selectedPaymentMethod, 
+            newOrder.OrderType = true;
+            if(Table != null)
             {
-                OrderDate = DateTime.Now,
-                UserId = user.UserId,
-                // CustomerId = selectedCustomer?.CustomerId, 
-                TotalAmount = TotalAmount,
-                Tax = TaxAmount,
-                //Discount = CalculateDiscount(cartItems),
-                Status = true,
-                //PaymentMethod = selectedPaymentMethod, 
-                OrderType = true,
-
-                //TableId = currentTableId 
-            };
+                newOrder.TableId = Table.TableId;
+            }
 
             foreach (var item in cartItems)
             {
@@ -310,6 +311,13 @@ namespace HighLand
 
                 }
             }
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            FirstOrderWindow firstOrderWindow = new FirstOrderWindow();
+            firstOrderWindow.Show();
+            this.Close();
         }
     }
 }

@@ -140,3 +140,7 @@ F:\SE\ky9\PRN212\HighLand\HighLand\obj\Debug\net8.0-windows\HighLand.csproj.Asse
 F:\SE\ky9\PRN212\HighLand\HighLand\obj\Debug\net8.0-windows\HighLand.csproj.Up2Date
 F:\SE\ky9\PRN212\HighLand\HighLand\obj\Debug\net8.0-windows\HighLand.sourcelink.json
 F:\SE\ky9\PRN212\HighLand\HighLand\bin\Debug\net8.0-windows\appsettings.json
+F:\SE\ky9\PRN212\HighLand\HighLand\obj\Debug\net8.0-windows\TableWindow.g.cs
+F:\SE\ky9\PRN212\HighLand\HighLand\obj\Debug\net8.0-windows\TableWindow.baml
+F:\SE\ky9\PRN212\HighLand\HighLand\obj\Debug\net8.0-windows\FirstOrderWindow.g.cs
+F:\SE\ky9\PRN212\HighLand\HighLand\obj\Debug\net8.0-windows\FirstOrderWindow.baml
