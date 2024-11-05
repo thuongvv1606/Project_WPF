@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HighLand"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="1200">
+        Title="MainWindow" Height="800" Width="1200"
+         WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid Margin="0,0,800,0">
             <Grid Margin="0,0,0,693" >
@@ -171,7 +172,7 @@
                 <Button Content="ReOrder"  Click="btnReOrder" Margin="234,10,481,10"/>
                 <Button Content="Enter"  Click="btnEnter" Margin="705,10,10,10"/>
                 <Button Content="Exit" Click="btnExit"   Background="Red" Margin="358,10,358,10"/>
-                <Button Content="SendFirst" Margin="585,10,130,10"/>
+                <Button Content="SendFirst" Margin="585,10,130,10" Click="Button_Click_2"/>
                 <Button Content="Bill"   Margin="474,10,241,10"/>
             </Grid>
             <Grid Margin="52,139,78,89">
