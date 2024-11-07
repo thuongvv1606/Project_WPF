@@ -10,7 +10,7 @@
         <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="306,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="272" Height="31" FontSize="18"/>
         <Button x:Name="btnLogin" Content="Login" HorizontalAlignment="Left" Margin="306,345,0,0" VerticalAlignment="Top" Height="33" Width="66" FontSize="18" Background="#FFA42E3A" Click="btnLogin_Click" Foreground="White"/>
         <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="458,345,0,0" VerticalAlignment="Top" Height="33" Width="66" FontSize="18" Background="#FFA42E3A" Foreground="White" Click="btnCancel_Click"/>
-        <Image Margin="304,26,244,217" Source="D:\PRN212.4\Project\Project_WPF\HighLand\images\logoLogin.png" />
+        <Image Margin="304,26,244,217" Source="F:\SE\ky9\PRN212\HighLand\HighLand\images\logoLogin.png" />
         <PasswordBox x:Name="txtPassword"  Margin="306,298,207,78" FontSize="18" />
         <Label Content="Email" HorizontalAlignment="Left" Margin="217,247,0,0" VerticalAlignment="Top" FontSize="18"/>
         <Label x:Name="lbPassword" Content="Password" HorizontalAlignment="Left" Margin="217,297,0,0" VerticalAlignment="Top" FontSize="18"/>

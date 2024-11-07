@@ -7,10 +7,25 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="BillWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="FirstOrderWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Login.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ProductDetailWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ProductEditWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ProductListWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RightPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="TableWindow.xaml.cs">
@@ -18,6 +33,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="BillWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="FirstOrderWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -25,6 +43,18 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ProductDetailWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ProductEditWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ProductListWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="RightPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="TableWindow.xaml">
