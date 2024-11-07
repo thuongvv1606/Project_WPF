@@ -22,6 +22,7 @@ namespace HighLand
     public partial class Login : Window
     {
         private IGenericRepository<User> userRepository = new GenericRepository<User>();
+
         public Login()
         {
             InitializeComponent();
@@ -36,8 +37,16 @@ namespace HighLand
             {
                 if (user.Password == password)
                 {
-                    FirstOrderWindow wpf = new FirstOrderWindow();
-                    wpf.Show();
+                    if (user.RoleId == 1)
+                    {
+                        UserManagement ui = new UserManagement();
+                        ui.Show();
+                    }
+                    else
+                    {
+                        FirstOrderWindow wpf = new FirstOrderWindow();
+                        wpf.Show();
+                    }
                 }
                 else
                 {
@@ -57,6 +66,12 @@ namespace HighLand
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void btnSignUp_Click(object sender, RoutedEventArgs e)
+        {
+            SignUp signUp = new SignUp();
+            signUp.Show();
         }
     }
 }

@@ -1,0 +1,30 @@
+﻿<Window x:Class="HighLand.SignUp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HighLand"
+        mc:Ignorable="d"
+        Title="SignUp" Height="450" Width="800">
+    <Grid Background="#FFFFFCED">
+        <Button x:Name="btnSignUp" Content="Sign Up" Background="#FFA42E3A" Foreground="White" HorizontalAlignment="Left" Margin="322,324,0,0" VerticalAlignment="Top" Click="btnSignUp_Click"/>
+        <Label x:Name="lbSignUp" Content="Sign Up" HorizontalAlignment="Left" Margin="217,10,0,0" VerticalAlignment="Top" FontSize="24" Foreground="#FFA42E3A"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="323,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="157"/>
+        <Label x:Name="lbPhone" Content="Phone Number" HorizontalAlignment="Left" Margin="217,237,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbName" Content="Full Name" HorizontalAlignment="Left" Margin="217,78,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbName_Copy1" Content="Address" HorizontalAlignment="Left" Margin="217,268,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbName_Copy2" Content="Gender" HorizontalAlignment="Left" Margin="217,0,0,0" VerticalAlignment="Center"/>
+        <Label x:Name="lbName_Copy3" Content="Re-password" HorizontalAlignment="Left" Margin="217,171,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbName_Copy4" Content="Password" HorizontalAlignment="Left" Margin="217,140,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbName_Copy5" Content="Email" HorizontalAlignment="Left" Margin="217,109,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtAddress" HorizontalAlignment="Left" Margin="323,272,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="157"/>
+        <TextBox x:Name="txtPhone" HorizontalAlignment="Left" Margin="323,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="157"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="323,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="157"/>
+        <RadioButton x:Name="Male" Content="Male" HorizontalAlignment="Left" Margin="323,0,0,0" VerticalAlignment="Center"  />
+        <RadioButton x:Name="Female" Content="Female" HorizontalAlignment="Left" Margin="423,0,0,0" VerticalAlignment="Center"  />
+        <Button x:Name="btnCancel" Content="Cancel" Background="#FFA42E3A" Foreground="White" HorizontalAlignment="Left" Margin="441,324,0,0" VerticalAlignment="Top" Click="btnCancel_Click"/>
+        <PasswordBox x:Name="txtPass" HorizontalAlignment="Left" Margin="323,144,0,0" VerticalAlignment="Top" Width="157"/>
+        <PasswordBox x:Name="txtPass1" HorizontalAlignment="Left" Margin="323,175,0,0" VerticalAlignment="Top" Width="157"/>
+
+    </Grid>
+</Window>
