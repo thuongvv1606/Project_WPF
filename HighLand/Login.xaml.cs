@@ -22,6 +22,7 @@ namespace HighLand
     public partial class Login : Window
     {
         private IGenericRepository<User> userRepository = new GenericRepository<User>();
+
         public Login()
         {
             InitializeComponent();
@@ -58,6 +59,12 @@ namespace HighLand
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void btnSignUp_Click(object sender, RoutedEventArgs e)
+        {
+            SignUp signUp = new SignUp();
+            signUp.Show();
         }
     }
 }

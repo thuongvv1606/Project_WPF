@@ -1,0 +1,51 @@
+﻿<Window x:Class="HighLand.UserManagement"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HighLand"
+        mc:Ignorable="d"
+        Title="UserManagement" Height="800" Width="1200"
+         WindowStartupLocation="CenterScreen">
+    <Grid>
+        <ListView x:Name="lv"  Margin="0,141,486,0" SelectionChanged="ListView_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Id" DisplayMemberBinding="{Binding UserId}"/>
+                    <GridViewColumn Header="FullName" DisplayMemberBinding="{Binding FullName}"/>
+                    <GridViewColumn Header="Email" DisplayMemberBinding="{Binding Email}"/>
+                    <GridViewColumn Header="Gender" DisplayMemberBinding="{Binding Gender}"/>
+                    <GridViewColumn Header="Role" DisplayMemberBinding="{Binding Role}"/>
+                    <GridViewColumn Header="PhoneNumber" DisplayMemberBinding="{Binding PhoneNumber}"/>
+                    <GridViewColumn Header="Address" DisplayMemberBinding="{Binding Address}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="btnSearch" Content="Search" HorizontalAlignment="Left" Margin="545,56,0,0" VerticalAlignment="Top" Width="82" Height="40" FontSize="20" Click="btnSearch_Click"/>
+        <Label x:Name="lbName" Content="Full Name" HorizontalAlignment="Left" Margin="31,15,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="31,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" RenderTransformOrigin="0.867,0.336" Height="40" FontSize="20"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="300,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" RenderTransformOrigin="0.867,0.336" Height="40" FontSize="20"/>
+        <Label x:Name="lbEmail" Content="Email" HorizontalAlignment="Left" Margin="300,15,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label x:Name="lbId" Content="ID" HorizontalAlignment="Left" Margin="753,141,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="txtId" HorizontalAlignment="Left" Margin="891,141,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" RenderTransformOrigin="0.867,0.336" Height="40" IsEnabled="False" FontSize="20"/>
+        <Label x:Name="lbRole" Content="Role" HorizontalAlignment="Left" Margin="753,497,0,0" VerticalAlignment="Top" FontSize="20" Height="41"/>
+        <Label x:Name="lbAddress" Content="Address" HorizontalAlignment="Left" Margin="753,379,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.454,0.22" Height="41"/>
+        <Label x:Name="lnPhone" Content="Phone Number" HorizontalAlignment="Left" Margin="747,444,0,0" VerticalAlignment="Top" FontSize="20" Height="40"/>
+        <Label x:Name="lbEmail1" Content="Email" HorizontalAlignment="Left" Margin="753,313,0,0" VerticalAlignment="Top" FontSize="20" Height="40"/>
+        <Label x:Name="lbFullNamw" Content="Full Name" HorizontalAlignment="Left" Margin="753,199,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="txtName1" HorizontalAlignment="Left" Margin="891,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" RenderTransformOrigin="0.867,0.336" Height="40" FontSize="20"/>
+        <TextBox x:Name="txtRole" HorizontalAlignment="Left" Margin="891,497,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" RenderTransformOrigin="0.867,0.336" Height="44" FontSize="20"/>
+        <TextBox x:Name="txtPhone" HorizontalAlignment="Left" Margin="891,440,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" RenderTransformOrigin="0.867,0.336" Height="44" FontSize="20"/>
+        <TextBox x:Name="txtAddress" HorizontalAlignment="Left" Margin="891,379,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" RenderTransformOrigin="0.867,0.336" Height="42" FontSize="20"/>
+        <TextBox x:Name="txtEmail1" HorizontalAlignment="Left" Margin="891,313,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" RenderTransformOrigin="0.867,0.336" Height="44" FontSize="20"/>
+        <Label x:Name="lbGender" Content="Gender" HorizontalAlignment="Left" Margin="753,258,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <RadioButton x:Name="Male" Content="Male" HorizontalAlignment="Left" Margin="891,269,0,0" VerticalAlignment="Top" FontSize="20" />
+        <RadioButton x:Name="Female" Content="Female" HorizontalAlignment="Left" Margin="1033,269,0,0" VerticalAlignment="Top" FontSize="20" />
+        <Button x:Name="btnEdit" Content="Edit" HorizontalAlignment="Left" Margin="891,576,0,0" VerticalAlignment="Top" Width="97" Height="40" FontSize="20" Click="btnEdit_Click"/>
+        <Button x:Name="btnDelete" HorizontalAlignment="Left" Margin="1003,576,0,0" VerticalAlignment="Top" Width="112" Height="40" FontSize="20"  Content="Delete" Click="btnDelete_Click"/>
+        <Button x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" Margin="1104,33,0,0" VerticalAlignment="Top" Width="67" Height="40" FontSize="20" Click="btnQuit_Click" Background="#FFF30B0B"/>
+        <Button x:Name="btnRefresh" Content="Refresh" HorizontalAlignment="Left" Margin="777,576,0,0" VerticalAlignment="Top" Width="97" Height="40" FontSize="20" Click="btnRefresh_Click" />
+
+
+    </Grid>
+</Window>
