@@ -37,16 +37,9 @@ namespace HighLand
             {
                 if (user.Password == password)
                 {
-                    if (user.RoleId == 1)
-                    {
-                        UserManagement ui = new UserManagement();
-                        ui.Show();
-                    }
-                    else
-                    {
-                        FirstOrderWindow wpf = new FirstOrderWindow();
-                        wpf.Show();
-                    }
+                    Application.Current.Properties["user"] = user;
+                    FirstOrderWindow wpf = new FirstOrderWindow();
+                    wpf.Show();
                 }
                 else
                 {

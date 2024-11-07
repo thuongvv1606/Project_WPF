@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HighLand"
         mc:Ignorable="d"
-        Title="Login" Height="450" Width="800">
+        Title="Login" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
     <Grid Background="#FFFFFCED">
         <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="306,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="272" Height="31" FontSize="18"/>
         <Button x:Name="btnLogin" Content="Login" HorizontalAlignment="Left" Margin="306,345,0,0" VerticalAlignment="Top" Height="33" Width="66" FontSize="18" Background="#FFA42E3A" Click="btnLogin_Click" Foreground="White"/>
