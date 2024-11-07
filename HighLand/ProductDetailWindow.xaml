@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HighLand"
         mc:Ignorable="d"
-        Title="ProductDetailWindow" Height="600" Width="800">
+        Title="ProductDetailWindow" Height="600" Width="800"
+         WindowStartupLocation="CenterScreen">
     <Grid>
         <!-- Tiêu đề -->
         <TextBlock Text="Product Detail" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10"/>

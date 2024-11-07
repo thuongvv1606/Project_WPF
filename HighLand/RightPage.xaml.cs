@@ -29,6 +29,22 @@ namespace HighLand
         {
             ProductListWindow productListWindow = new ProductListWindow();
             productListWindow.Show();
+            Window.GetWindow(this)?.Close();
+        }
+
+        private void btnExist_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show(
+                "Bạn có chắc chắn muốn thoát ứng dụng không?",
+                "Xác Nhận Thoát",
+                MessageBoxButton.YesNo,
+                MessageBoxImage.Question
+            );
+
+            if (result == MessageBoxResult.Yes)
+            {
+                Application.Current.Shutdown();
+            }
         }
     }
 }

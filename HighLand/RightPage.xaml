@@ -6,12 +6,13 @@
       xmlns:local="clr-namespace:HighLand"
       mc:Ignorable="d" 
       d:DesignHeight="600" d:DesignWidth="400"
-      Title="RightPage">
+      Title="RightPage"
+      Background="Beige">
 
     <Grid>
         <Button x:Name="btnUser" Content="User Management" HorizontalAlignment="Center" Margin="0,27,0,0" VerticalAlignment="Top" Height="63" Width="380" Background="#FFA24B3D"/>
         <Button x:Name="btnProduct" Content="Product Management" HorizontalAlignment="Center" Margin="0,107,0,0" VerticalAlignment="Top" Height="63" Width="380" Background="#FFA24B3D" Click="btnProduct_Click"/>
-        <Button Content="Button" HorizontalAlignment="Center" Margin="0,187,0,0" VerticalAlignment="Top" Height="63" Width="380" Background="#FFA24B3D"/>
+        <Button x:Name="btnExist" Content="Exist" HorizontalAlignment="Center" Margin="0,187,0,0" VerticalAlignment="Top" Height="63" Width="380" Background="#FFA24B3D" Click="btnExist_Click"/>
 
     </Grid>
 </Page>

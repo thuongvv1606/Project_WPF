@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HighLand"
         mc:Ignorable="d"
-        Title="ProductListWindow" Height="800" Width="1200">
+        Title="ProductListWindow" Height="800" Width="1200"
+         WindowStartupLocation="CenterScreen">
     <Grid>
         <!-- Phần trên cùng với nút Back và tiêu đề -->
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10">
