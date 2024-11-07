@@ -36,6 +36,7 @@ namespace HighLand
             {
                 if (user.Password == password)
                 {
+                    Application.Current.Properties["user"] = user;
                     FirstOrderWindow wpf = new FirstOrderWindow();
                     wpf.Show();
                 }

@@ -1,6 +1,7 @@
 ﻿using HighLand.Models;
 using HighLand.repositories;
 using System.Collections.ObjectModel;
+using System.Printing;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -25,16 +26,16 @@ namespace HighLand
         private IGenericRepository<Role> roleRepository = new GenericRepository<Role>();
         private IGenericRepository<Order> orderRepository = new GenericRepository<Order>();
         private IGenericRepository<ProductCategory> categoryRepository = new GenericRepository<ProductCategory>();
+        private IGenericRepository<Models.Table> tableRepository = new GenericRepository<Models.Table>();
         private int currentOffset = 0;
         private List<CartItem> cartItems = new List<CartItem>();
         public ObservableCollection<ProductCategory> Categories { get; set; }
-
+        private Order newOrder;
         public decimal TotalAmount => cartItems.Sum(item => item.Total);
         public decimal TaxAmount => TotalAmount * 0.20m;
         public decimal FinalAmount => TotalAmount + TaxAmount;
         public Models.Table Table { get; private set; }
         User user = new User();
-
 
         public MainWindow(Models.Table table)
         {
@@ -44,19 +45,17 @@ namespace HighLand
             LoadCarts();
             LoadUser();
             Table = table;
-
         }
 
         private void LoadCategory()
         {
             Categories = new ObservableCollection<ProductCategory>
     {
-        new ProductCategory {CategoryId = -2, CategoryName = "Tất cả sản phẩm" },
+        new ProductCategory { CategoryId = -2, CategoryName = "Tất cả sản phẩm" },
         new ProductCategory { CategoryId = -1, CategoryName = "Bán chạy" },
     };
 
             var additionalCategories = categoryRepository.GetAll();
-
             foreach (var category in additionalCategories)
             {
                 Categories.Add(category);
@@ -67,17 +66,25 @@ namespace HighLand
 
         private void LoadUser()
         {
-            user = userRepository.Get(x => x.UserId == 1);
-            string role = roleRepository.Get(x => x.RoleId == user.RoleId).RoleName;
-            txtName.Text = $"{role}: {user.FullName}";
+            user = Application.Current.Properties["user"] as User;
+            if (user != null)
+            {
+                string role = roleRepository.Get(x => x.RoleId == user.RoleId).RoleName;
+                txtName.Text = $"{role}: {user.FullName}";
+            }
+            else
+            {
+                MessageBox.Show("Bạn chưa login");
+                this.Close();
+            }
         }
-
 
         private void LoadCarts()
         {
             CartListBox.ItemsSource = null;
             CartListBox.ItemsSource = cartItems;
         }
+
         private void LoadProducts()
         {
             txtDate.Text = DateTime.UtcNow.ToString("MMMM dd, dddd hh:mm:ss tt");
@@ -111,7 +118,6 @@ namespace HighLand
             }
         }
 
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             if (currentOffset <= productRepository.GetAll().Count() - 30)
@@ -128,8 +134,6 @@ namespace HighLand
                 currentOffset -= 30;
                 LoadProducts();
             }
-
-            Application.Current.Properties["UserName"] = "John Doe";
         }
 
         public void AddItem(CartItem item)
@@ -168,7 +172,6 @@ namespace HighLand
                 {
                     cartItems.Remove(cartItem);
                     LoadCarts();
-                    CartListBox.Items.Refresh();
                 }
             }
             UpdateTotalAmount();
@@ -179,13 +182,12 @@ namespace HighLand
             txtTotalAmount.Text = TotalAmount.ToString("C");
             txtTaxAmount.Text = TaxAmount.ToString("C");
             txtFinalAmount.Text = FinalAmount.ToString("C");
-            txtOrderedItems.Text = $"{cartItems.Sum(item => item.Quantity)}/{cartItems.Count()}";
-
+            txtOrderedItems.Text = $"{cartItems.Sum(item => item.Quantity)}/{cartItems.Count}";
         }
 
         private void btnReOrder(object sender, RoutedEventArgs e)
         {
-            cartItems = new List<CartItem>();
+            cartItems.Clear();
             UpdateTotalAmount();
             LoadCarts();
         }
@@ -205,7 +207,6 @@ namespace HighLand
             }
         }
 
-
         private void ConfirmOrder()
         {
             if (cartItems.Count == 0)
@@ -213,20 +214,18 @@ namespace HighLand
                 MessageBox.Show("Giỏ hàng rỗng. Không thể xác nhận đơn hàng.");
                 return;
             }
-            Order newOrder = new Order();
-            newOrder.OrderDate = DateTime.Now;
-            newOrder.UserId = user.UserId;
-            // CustomerId = selectedCustomer?.CustomerId, 
-            newOrder.TotalAmount = TotalAmount;
-            newOrder.Tax = TaxAmount;
-            // Discount = CalculateDiscount(cartItems),
-            newOrder.Status = true;
-            // PaymentMethod = selectedPaymentMethod, 
-            newOrder.OrderType = true;
-            if(Table != null)
+
+            newOrder = new Order
             {
-                newOrder.TableId = Table.TableId;
-            }
+                OrderDate = DateTime.Now,
+                UserId = user.UserId,
+                TotalAmount = TotalAmount,
+                Tax = TaxAmount,
+                Status = true,
+                OrderType = true,
+                TableId = Table?.TableId,
+                
+            };
 
             foreach (var item in cartItems)
             {
@@ -243,13 +242,11 @@ namespace HighLand
             }
 
             orderRepository.Add(newOrder);
-
             MessageBox.Show("Đơn hàng đã được xác nhận thành công!");
             cartItems.Clear();
             LoadCarts();
             UpdateTotalAmount();
         }
-
 
         private void UpdateInventory(int productId, int quantitySold)
         {
@@ -264,13 +261,12 @@ namespace HighLand
         private void btnExit(object sender, RoutedEventArgs e)
         {
             MessageBoxResult result = MessageBox.Show(
-        "Bạn có chắc chắn muốn thoát ứng dụng không?",
-        "Xác Nhận Thoát",
-        MessageBoxButton.YesNo,
-        MessageBoxImage.Question
-    );
+                "Bạn có chắc chắn muốn thoát ứng dụng không?",
+                "Xác Nhận Thoát",
+                MessageBoxButton.YesNo,
+                MessageBoxImage.Question
+            );
 
-            // Nếu người dùng chọn Yes, thoát ứng dụng
             if (result == MessageBoxResult.Yes)
             {
                 Application.Current.Shutdown();
@@ -286,30 +282,26 @@ namespace HighLand
                 if (selectedRow.CategoryId == -2)
                 {
                     products = productRepository.GetAll().Skip(currentOffset).Take(30).ToList();
-                    ProductListBox.ItemsSource = products;
-
                 }
                 else if (selectedRow.CategoryId == -1)
                 {
                     products = productRepository.GetAllIncluding(x => x.OrderDetails)
-    .Select(p => new
-    {
-        Product = p,
-        OrderCount = p.OrderDetails.Sum(od => (int?)od.Quantity) ?? 0 // Đảm bảo không có giá trị null
-    })
-    .OrderByDescending(x => x.OrderCount) // Sắp xếp theo số lượng đơn hàng
-    .Skip(currentOffset) // Bỏ qua các sản phẩm trước đó
-    .Take(30) // Lấy 30 sản phẩm tiếp theo
-    .Select(x => x.Product) // Chọn sản phẩm từ đối tượng
-    .ToList();
-                    ProductListBox.ItemsSource = products;
+                        .Select(p => new
+                        {
+                            Product = p,
+                            OrderCount = p.OrderDetails.Sum(od => (int?)od.Quantity) ?? 0
+                        })
+                        .OrderByDescending(x => x.OrderCount)
+                        .Skip(currentOffset)
+                        .Take(30)
+                        .Select(x => x.Product)
+                        .ToList();
                 }
                 else
                 {
                     products = productRepository.GetAll().Where(x => x.CategoryId == selectedRow.CategoryId).Skip(currentOffset).Take(30).ToList();
-                    ProductListBox.ItemsSource = products;
-
                 }
+                ProductListBox.ItemsSource = products;
             }
         }
 
@@ -319,5 +311,42 @@ namespace HighLand
             firstOrderWindow.Show();
             this.Close();
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            if (newOrder != null && newOrder.OrderDetails.Any())
+            {
+                // Map main order details
+                OrderDTO orderDTO = new OrderDTO()
+                {
+                    OrderId = newOrder.OrderId,
+                    TableName = tableRepository.Get(t => t.TableId == newOrder.TableId)?.TableNumber,
+                    UserName = userRepository.Get(u => u.UserId == newOrder.UserId)?.FullName,     
+                    OrderDate = newOrder.OrderDate,
+                    TotalAmount = newOrder.TotalAmount,
+                    Tax = newOrder.Tax,
+                    TotalPayment = newOrder.TotalAmount + newOrder.Tax
+                };
+
+                // Map each order detail to OrderDetailDTO
+                orderDTO.OrderDetails = newOrder.OrderDetails.Select(detail => new OrderDetailDTO()
+                {
+                    ProductId = detail.ProductId,
+                    ProductName = productRepository.Get(p => p.ProductId == detail.ProductId)?.ProductName, // Retrieve product name
+                    Quantity = detail.Quantity,
+                    Price = detail.Price,
+                    TotalPrice = detail.TotalPrice
+                }).ToList();
+
+
+                BillWindow billWindow = new BillWindow(orderDTO);
+                billWindow.Show();
+            }
+            else
+            {
+                MessageBox.Show("Chưa có đơn hàng nào được xác nhận để in.");
+            }
+        }
+
     }
 }
