@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HighLand"
         mc:Ignorable="d"
-        Title="BillWindow" Height="600" Width="400">
+        Title="BillWindow" Height="600" Width="400"
+        WindowStartupLocation="CenterScreen">
     <Grid Margin="10">
         <StackPanel>
             <!-- Tiêu đề -->
